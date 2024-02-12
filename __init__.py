@@ -30,6 +30,12 @@ def mongraphique():
 @app.route("/histogramme/")
 def monhistogramme():
     return render_template("histogramme.html")
+
+@app.route('/extract-minutes/<date_string>')
+def extract_minutes(date_string):
+        date_object = datetime.strptime(date_string, '2024-02-12T07:01:43Z')
+        minutes = date_object.minute
+        return jsonify({'minutes': minutes})  
   
 if __name__ == "__main__":
   app.run(debug=True)
