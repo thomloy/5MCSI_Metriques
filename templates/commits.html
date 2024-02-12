@@ -2,18 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Graphique des Commits</title>
+    <title>Graphique des Commits thomloy :</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-    <div id="chart_div" style="width: 800px; height: 500px;"></div>
+    <div id="chart_div" style="width: 800px; height: _00px;"></div>
     <script>
         // Charger la bibliothèque de graphiques Google
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
-            // Faire une requête AJAX à l'API GitHub
+            // Faire une requête à l'API GitHub
             fetch('https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits')
                 .then(response => response.json())
                 .then(data => {
